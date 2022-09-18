@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Form validation</title>
+</head>
+
+<body>
+    <form novalidate action="">
+        <fieldset>
+            <legend>Your details</legend>
+            <ul>
+                <li>
+                    <label for="email">email</label>
+                    <input type="email" id="email" minlength="8" required>
+                    <span class="error check"></span>
+                </li>
+                <li>
+                    <label for="country">country</label>
+                    <select name="country" id="country" required>
+                        <option value="">select a country</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                    <span></span>
+                </li>
+                <li>
+                    <label for="zip">zip code <span class="info">(format: 0001-1234)</span></label>
+                    <input type="tel" id="zip" pattern="[0-9]{4}[-]{1}[0-9]{4}" maxlength="9" required>
+                    <span class="error check"></span>
+                </li>
+                <li>
+                    <label for="password">password<span class="info">(8-20 characters)</span></label>
+                    <input type="password" id="password" minlength="8" maxlength="20" required>
+                    <span class="error check"></span>
+                </li>
+                <li>
+                    <label for="confirm">confirm password</label>
+                    <input type="password" id="confirm" minlength="8" maxlength="20" required>
+                    <span class="error"></span>
+                </li>
+            </ul>
+            <div class="btn-container"><button type="submit">submit</button></div>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
